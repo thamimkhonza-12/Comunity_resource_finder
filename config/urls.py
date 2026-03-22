@@ -31,12 +31,10 @@ router.register(r'resources', ResourceViewSet)
 router.register(r'locations', LocationViewSet)
 router.register(r'reviews', ReviewViewSet)
 
+from django.urls import path, include
+
 urlpatterns = [
-       path('admin/', admin.site.urls),
-
-    path('api/token/', TokenObtainPairView.as_view()),
-    path('api/token/refresh/', TokenRefreshView.as_view()),
-
-    path('api/', include(router.urls)),
-    path('api/users/', include('accounts.urls')),
+    path('admin/', admin.site.urls),
+    path('api/', include('api.urls')),
+    path('api/accounts/', include('accounts.urls')),  
 ]
