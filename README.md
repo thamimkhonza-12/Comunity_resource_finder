@@ -13,6 +13,24 @@ https://community-resource-api.onrender.com
 
 ## 📌 API Endpoints
 
+## 🔐 Authentication
+
+### Login (Get JWT Token)
+
+👉 https://community-resource-api.onrender.com/api/token/
+
+---
+
+### Refresh Token
+👉 https://community-resource-api.onrender.com/api/token/refresh/
+
+---
+
+### Users
+👉 https://community-resource-api.onrender.com/api/users/
+
+---
+
 ### 🔹 Get All Resources
 👉 https://community-resource-api.onrender.com/api/resources/
 
@@ -25,16 +43,6 @@ https://community-resource-api.onrender.com
 
 ### 🔹 Get Resource by ID
 👉 https://community-resource-api.onrender.com/api/resources/1/
-
----
-
-### 🔹 User Registration
-👉 https://community-resource-api.onrender.com/api/accounts/register/
-
----
-
-### 🔹 Login (Get JWT Token)
-👉 https://community-resource-api.onrender.com/api/accounts/login/
 
 ---
 
