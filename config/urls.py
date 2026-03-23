@@ -16,25 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from rest_framework.routers import DefaultRouter
-
-from resources.views import ResourceViewSet
-from locations.views import LocationViewSet
-from reviews.views import ReviewViewSet
-from rest_framework_simplejwt.views import (
-    TokenObtainPairView,
-    TokenRefreshView,
-)
-
-router = DefaultRouter()
-router.register(r'resources', ResourceViewSet)
-router.register(r'locations', LocationViewSet)
-router.register(r'reviews', ReviewViewSet)
-
-from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('api.urls')),
-    path('api/accounts/', include('accounts.urls')),  
+
+    path('api/accounts/', include('accounts.urls')),
+    path('api/', include('resources.urls')),
+    path('api/', include('locations.urls')),
+    path('api/', include('reviews.urls')),
 ]
