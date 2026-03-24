@@ -1,98 +1,88 @@
 # 🌍 Community Resource Finder API
 
-A Django REST API that helps users find community resources (such as clinics, shelters, and services) based on location.
+A Django REST API that helps users find community resources based on location.
 
 ---
 
 ## 🚀 Live API
 
-🔗 Base URL:  
-https://community-resource-api.onrender.com
+👉 https://community-resource-api.onrender.com/
+
+👉 API Root:
+https://community-resource-api.onrender.com/api/
 
 ---
 
-## 📌 API Endpoints
+## 📦 Endpoints
+
+### 🔹 Resources
+
+https://community-resource-api.onrender.com/api/resources/
+
+### 🔹 Locations
+
+https://community-resource-api.onrender.com/api/locations/
+
+### 🔹 Reviews
+
+https://community-resource-api.onrender.com/api/reviews/
+
+---
+
+## 📍 Nearby Resources
+
+⚠️ Requires query parameters (lat, lng, radius)
+
+Example:
+https://community-resource-api.onrender.com/api/resources/nearby/?lat=-29.8587&lng=31.0218&radius=10
+
+---
 
 ## 🔐 Authentication
 
-### Login (Get JWT Token)
+### 🔹 Register (POST)
 
-👉 https://community-resource-api.onrender.com/api/token/
+https://community-resource-api.onrender.com/api/accounts/register/
 
----
-
-### Refresh Token
-👉 https://community-resource-api.onrender.com/api/token/refresh/
-
----
-
-### Users
-👉 https://community-resource-api.onrender.com/api/users/
+```json
+{
+  "username": "testuser",
+  "email": "test@example.com",
+  "password": "password123"
+}
+```
 
 ---
 
-### 🔹 Get All Resources
-👉 https://community-resource-api.onrender.com/api/resources/
+### 🔹 Get Token (Login)
+
+https://community-resource-api.onrender.com/api/token/
 
 ---
 
-### 🔹 Get Nearby Resources (Location-based)
-👉 https://community-resource-api.onrender.com/api/resources/nearby/?lat=-29.8587&lng=31.0218&radius=10
+### 🔹 Refresh Token
 
----
-
-### 🔹 Get Resource by ID
-👉 https://community-resource-api.onrender.com/api/resources/1/
-
----
-
-### 🔹 Reviews
-👉 https://community-resource-api.onrender.com/api/reviews/
+https://community-resource-api.onrender.com/api/token/refresh/
 
 ---
 
 ## 🛠 Tech Stack
 
-- Django
-- Django REST Framework
-- SQLite (development)
-- Render (deployment)
-- SimpleJWT (authentication)
+* Django
+* Django REST Framework
+* JWT Authentication
+* SQLite (Production-ready upgrade: PostgreSQL)
 
 ---
 
-## ⚡ Features
+## ⚠️ Notes
 
-- 🔐 User authentication (JWT)
-- 📍 Location-based resource search
-- ⭐ Reviews system
-- 🌍 RESTful API design
-
----
-
-## 🧪 How to Test
-
-Use a browser or tools like Postman:
-
-1. Open:
-   👉 https://community-resource-api.onrender.com/api/resources/
-
-2. Try filters:
-   - Nearby search
-   - Specific resource IDs
+* Some endpoints require **POST requests** (use Postman or Thunder Client)
+* Nearby endpoint requires query parameters
+* API is deployed on Render
 
 ---
 
-## 📦 Local Setup
+## 👨‍💻 Author
 
-```bash
-git clone https://github.com/thamimkhonza-12/Comunity_resource_finder.git
-cd Comunity_resource_finder
-
-python -m venv venv
-source venv/bin/activate  # or venv\Scripts\activate on Windows
-
-pip install -r requirements.txt
-
-python manage.py migrate
-python manage.py runserver
+Thami Dlamini
