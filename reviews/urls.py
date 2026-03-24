@@ -1,7 +1,7 @@
 from rest_framework.routers import DefaultRouter
-from .views import LocationViewSet
+from .views import ReviewViewSet
 
 router = DefaultRouter()
-router.register('', LocationViewSet)
+router.register('', ReviewViewSet)
 
 urlpatterns = router.urls
